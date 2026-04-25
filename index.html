@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Goda — Escape to Your Perfect Paradise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">T-Goda</a>
+    <nav class="nav">
+      <a href="index.html" class="nav__link nav__link--active">Hotels</a>
+      <a href="#" class="nav__link">Flights</a>
+      <a href="#" class="nav__link">Bundles</a>
+      <a href="#" class="nav__link">Activities</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__signin">Sign In</button>
+      <button class="btn btn--primary btn--sm">Create Account</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- Hero Section -->
+<section class="hero container">
+  <div class="hero__bg placeholder-img placeholder-img--teal">
+    <!-- Decorative palm leaves overlay -->
+    <div class="hero__overlay"></div>
+    <div class="hero__palm hero__palm--right"></div>
+  </div>
+  <div class="hero__content">
+    <h1 class="hero__title">Escape to Your<br>Perfect Paradise</h1>
+    <p class="hero__subtitle">Unlock exclusive prices on over 2 million properties and flights<br>across the globe.</p>
+    
+    <form class="search-bar" onsubmit="handleSearch(event)">
+      <div class="search-bar__field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Where to next?" id="destination">
+      </div>
+      <div class="search-bar__field">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <input type="text" value="Oct 12 - Oct 18" id="dates" readonly>
+      </div>
+      <button type="submit" class="btn btn--primary search-bar__btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        Search
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Feature Cards -->
+<section class="features container">
+  <div class="feature-card">
+    <div class="feature-card__icon feature-card__icon--blue">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+    </div>
+    <h3 class="feature-card__title">Best Price Guarantee</h3>
+    <p class="feature-card__text">Find a lower price? We'll match it and give you a voucher for your next trip.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-card__icon feature-card__icon--pink">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
+    </div>
+    <h3 class="feature-card__title">24/7 Global Support</h3>
+    <p class="feature-card__text">Our world-class support team is here to help you anywhere, anytime in 40+ languages.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-card__icon feature-card__icon--amber">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    </div>
+    <h3 class="feature-card__title">Flexible Booking</h3>
+    <p class="feature-card__text">Life happens. Most of our properties offer free cancellation for peace of mind.</p>
+  </div>
+</section>
+
+<!-- Trending Destinations -->
+<section class="trending container">
+  <div class="trending__header">
+    <div>
+      <h2 class="trending__title">Trending Destinations</h2>
+      <p class="trending__subtitle">Handpicked favorites for your next adventure</p>
+    </div>
+    <a href="#" class="trending__viewall">View all</a>
+  </div>
+  
+  <div class="destinations">
+    <a href="search.html" class="destination">
+      <div class="destination__img">
+        <img src="img/Bangkok.png" alt="">
+        <span class="destination__badge">TOP RATED</span>
+      </div>
+      <h4 class="destination__name">Bangkok, Thailand</h4>
+      <p class="destination__price">Starting from <span>$120</span></p>
+    </a>
+    <a href="search.html" class="destination">
+      <div class="destination__img">
+        <img src="img/Tokyo.png" alt="">
+      </div>
+      <h4 class="destination__name">Tokyo, Japan</h4>
+      <p class="destination__price">Starting from <span>$250</span></p>
+    </a>
+    <a href="search.html" class="destination">
+      <div class="destination__img">
+        <img src="img/Paris.png" alt="">
+      </div>
+      <h4 class="destination__name">Paris, France</h4>
+      <p class="destination__price">Starting from <span>$180</span></p>
+    </a>
+    <a href="search.html" class="destination">
+      <div class="destination__img">
+        <img src="img/London.png" alt="">
+      </div>
+      <h4 class="destination__name">London, UK</h4>
+      <p class="destination__price">Starting from <span>$210</span></p>
+    </a>
+  </div>
+</section>
+
+<!-- Summer Sale Banner -->
+<section class="sale-banner container">
+  <div class="sale-banner__content">
+    <h2 class="sale-banner__title">Summer Sales: Up to<br>40% Off!</h2>
+    <p class="sale-banner__text">Exclusive member deals on flights and luxury hotels for your next<br>summer getaway. Valid until Oct 31st.</p>
+    <div class="sale-banner__actions">
+      <a href="#" class="btn btn--white">Explore Deals</a>
+      <a href="#" class="btn btn--outline-white">Join Club T-Goda</a>
+    </div>
+  </div>
+  <div class="sale-banner__decor">
+    <svg xmlns="http://www.w3.org/2000/svg" width="249" height="250" viewBox="0 0 249 250" fill="none">
+<path fill="#990033" d="M242.5 153.125L153.125 242.5C150.625 245 147.812 246.875 144.688 248.125C141.562 249.375 138.438 250 135.312 250C132.188 250 129.062 249.375 125.938 248.125C122.812 246.875 120 245 117.5 242.5L7.1875 132.188C4.89583 129.896 3.125 127.24 1.875 124.219C0.625 121.198 0 118.021 0 114.688V25C0 18.125 2.44792 12.2396 7.34375 7.34375C12.2396 2.44792 18.125 0 25 0H114.688C118.021 0 121.25 0.677083 124.375 2.03125C127.5 3.38542 130.208 5.20833 132.5 7.5L242.5 117.812C245 120.312 246.823 123.125 247.969 126.25C249.115 129.375 249.688 132.5 249.688 135.625C249.688 138.75 249.115 141.823 247.969 144.844C246.823 147.865 245 150.625 242.5 153.125ZM56.25 75C61.4583 75 65.8854 73.1771 69.5312 69.5312C73.1771 65.8854 75 61.4583 75 56.25C75 51.0417 73.1771 46.6146 69.5312 42.9688C65.8854 39.3229 61.4583 37.5 56.25 37.5C51.0417 37.5 46.6146 39.3229 42.9688 42.9688C39.3229 46.6146 37.5 51.0417 37.5 56.25C37.5 61.4583 39.3229 65.8854 42.9688 69.5312C46.6146 73.1771 51.0417 75 56.25 75ZM137.5 193.75L181.25 150C183.542 147.708 185.365 145 186.719 141.875C188.073 138.75 188.75 135.417 188.75 131.875C188.75 124.792 186.25 118.75 181.25 113.75C176.25 108.75 170.208 106.25 163.125 106.25C159.167 106.25 155.26 107.396 151.406 109.688C147.552 111.979 142.917 115.833 137.5 121.25C131.25 115.417 126.354 111.458 122.812 109.375C119.271 107.292 115.625 106.25 111.875 106.25C104.792 106.25 98.75 108.75 93.75 113.75C88.75 118.75 86.25 124.792 86.25 131.875C86.25 135.417 86.9271 138.75 88.2812 141.875C89.6354 145 91.4583 147.708 93.75 150L137.5 193.75Z" fill="#191C22"/>
+</svg>
+    <div class="sale-banner__photo">
+      <img src="img/Overlay+Shadow_css-transform.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter container">
+  <div class="newsletter__inner">
+    <div class="newsletter__icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+    </div>
+    <h2 class="newsletter__title">Get Travel Deals Directly</h2>
+    <p class="newsletter__text">Subscribe to our newsletter and get early access to hidden gems and seasonal<br>discounts. No spam, only adventure.</p>
+    <form class="newsletter__form" onsubmit="handleSubscribe(event)">
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit" class="btn btn--primary">Subscribe Now</button>
+    </form>
+    <p class="newsletter__legal">By subscribing, you agree to our Terms of Service and Privacy Policy.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">T-Goda</a>
+        <p class="footer__tagline">Making world travel accessible, affordable, and delightful for everyone since 2024. Your journey starts here.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2024 T-Goda Booking. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSearch(e) {
+  e.preventDefault();
+  window.location.href = 'search.html';
+}
+function handleSubscribe(e) {
+  e.preventDefault();
+  alert('Thanks for subscribing!');
+}
+</script>
+
+</body>
+</html>

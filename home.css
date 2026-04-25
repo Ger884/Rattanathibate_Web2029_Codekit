@@ -1,0 +1,410 @@
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  margin-top: 24px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 1200px;
+  height: 460px;
+  padding: 0;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url(img/TopBanner.png);
+  height: 1200px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 60, 100, 0.25) 0%, rgba(15, 60, 100, 0.4) 100%);
+}
+
+.hero__palm--right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 80% 20%, rgba(40, 80, 50, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 60%, rgba(30, 70, 40, 0.5) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 32px;
+}
+
+.hero__title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero__subtitle {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 32px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 720px;
+}
+
+.search-bar__field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition);
+}
+
+.search-bar__field:focus-within {
+  border-color: var(--color-primary);
+}
+
+.search-bar__field svg {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.search-bar__field input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--color-text-primary);
+  background: transparent;
+}
+
+.search-bar__field input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.search-bar__btn {
+  padding: 12px 28px;
+}
+
+/* ==========================================================================
+   Features
+   ========================================================================== */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.feature-card {
+  background: var(--color-bg-feature);
+  padding: 32px 28px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.feature-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.feature-card__icon--blue {
+  background: #DCE7FB;
+  color: var(--color-primary);
+}
+
+.feature-card__icon--pink {
+  background: #FCE0E8;
+  color: #DB4F75;
+}
+
+.feature-card__icon--amber {
+  background: #FBEBCD;
+  color: #C18A20;
+}
+
+.feature-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.feature-card__text {
+  font-size: 14.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Trending
+   ========================================================================== */
+
+.trending {
+  margin-top: 72px;
+}
+
+.trending__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.trending__title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.trending__subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.trending__viewall {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.trending__viewall:hover { text-decoration: underline; }
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.destination {
+  display: block;
+  transition: transform var(--transition);
+}
+
+.destination:hover {
+  transform: translateY(-4px);
+}
+
+.destination__img {
+  width: 282px;
+  height: 376px;
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.destination__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #fff;
+  color: var(--color-text-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+.destination__name {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.destination__price {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.destination__price span {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Sale Banner
+   ========================================================================== */
+
+.sale-banner {
+  margin-top: 80px;
+  background: rgba(182, 27, 74, 1);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.sale-banner__content {
+  position: relative;
+  z-index: 2;
+}
+
+.sale-banner__title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.sale-banner__text {
+  font-size: 15.5px;
+  opacity: 0.95;
+  margin-bottom: 28px;
+  line-height: 1.55;
+}
+
+.sale-banner__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.sale-banner__decor {
+  position: relative;
+  height: 280px;
+}
+
+.sale-banner__heart {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+
+.sale-banner__photo {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 336.31px;
+  height: 336.31px;
+  transform: rotate(4deg);
+}
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+.newsletter {
+  margin-top: 72px;
+}
+
+.newsletter__inner {
+  background: var(--color-bg-newsletter);
+  border-radius: var(--radius-lg);
+  padding: 56px 32px;
+  text-align: center;
+}
+
+.newsletter__icon {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.newsletter__title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.newsletter__text {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+
+.newsletter__form {
+  display: flex;
+  gap: 10px;
+  max-width: 540px;
+  margin: 0 auto 14px;
+}
+
+.newsletter__form input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.newsletter__form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.newsletter__legal {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero { height: auto; padding: 60px 24px; }
+  .hero__title { font-size: 36px; }
+  .search-bar { flex-direction: column; }
+  .features { grid-template-columns: 1fr; }
+  .destinations { grid-template-columns: repeat(2, 1fr); }
+  .sale-banner { grid-template-columns: 1fr; padding: 40px 28px; }
+  .sale-banner__title { font-size: 30px; }
+  .sale-banner__decor { display: none; }
+  .newsletter__form { flex-direction: column; }
+}

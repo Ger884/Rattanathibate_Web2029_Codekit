@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Goda — Search Results</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="logo">T-Goda</a>
+    <nav class="nav">
+      <a href="index.html" class="nav__link nav__link--active">Hotels</a>
+      <a href="#" class="nav__link">Flights</a>
+      <a href="#" class="nav__link">Bundles</a>
+      <a href="#" class="nav__link">Activities</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__signin">Sign In</button>
+      <button class="btn btn--primary btn--sm">Create Account</button>
+    </div>
+  </div>
+</header>
+
+<main class="container search-page">
+  
+  <!-- Search Summary Bar -->
+  <div class="search-summary">
+    <div class="search-summary__field">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <div class="search-summary__label">Destination</div>
+        <div class="search-summary__value">Bali, Indonesia</div>
+      </div>
+    </div>
+    <div class="search-summary__field">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <div>
+        <div class="search-summary__label">Dates</div>
+        <div class="search-summary__value">Oct 12 - Oct 19, 2024</div>
+      </div>
+    </div>
+    <div class="search-summary__field">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div>
+        <div class="search-summary__label">Travelers</div>
+        <div class="search-summary__value">2 Adults, 1 Room</div>
+      </div>
+    </div>
+    <button class="btn btn--primary search-summary__btn">Update Search</button>
+  </div>
+  
+  <!-- Layout -->
+  <div class="search-layout">
+    
+    <!-- Sidebar Filters -->
+    <aside class="filters">
+      <div class="filters__header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+        <h3>Filters</h3>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Price Range</h4>
+        <div class="filters__price">
+          <span>$0</span>
+          <span>$1000+</span>
+        </div>
+        <input type="range" class="filters__slider" min="0" max="1000" value="500">
+      </div>
+      
+      <div class="filters__group">
+        <h4>Property Type</h4>
+        <label class="filter-check"><input type="checkbox"> <span>Hotels</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Resorts</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Apartments</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Villas</span></label>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Star Rating</h4>
+        <label class="filter-check"><input type="checkbox"> <span class="stars-row">★★★★★</span></label>
+        <label class="filter-check"><input type="checkbox"> <span class="stars-row">★★★★<span class="star-empty">☆</span></span></label>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Facilities</h4>
+        <label class="filter-check"><input type="checkbox"> <span>Free Wi-Fi</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Swimming Pool</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Fitness Center</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Spa</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Parking</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Pet Friendly</span></label>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Review Score</h4>
+        <label class="filter-check"><input type="checkbox"> <span>Superb 9+</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Very Good 8+</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Good 7+</span></label>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Neighborhood</h4>
+        <label class="filter-check"><input type="checkbox"> <span>Patong</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Karon</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Kata</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Kamala</span></label>
+      </div>
+      
+      <div class="filters__group">
+        <h4>Bed Type</h4>
+        <label class="filter-check"><input type="checkbox"> <span>Single</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>Double</span></label>
+        <label class="filter-check"><input type="checkbox"> <span>King</span></label>
+      </div>
+      
+      <div class="map-card">
+        <div class="map-card__bg placeholder-img placeholder-img--blue"></div>
+        <button class="map-card__btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          View on Map
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Results -->
+    <section class="results">
+      <div class="results__header">
+        <h2>245 properties in Bali</h2>
+        <div class="results__sort">
+          <span>Sort by:</span>
+          <button class="sort-btn">
+            Recommended
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Flash Deals -->
+      <div class="flash-deals">
+        <div class="flash-deals__head">
+          <div class="flash-deals__title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C73166" stroke="#C73166" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            Flash Deals for You
+          </div>
+          <div class="flash-deals__timer">
+            <span class="flash-deals__ends">Ends in:</span>
+            <span class="flash-deals__time">08 : 45 : 12</span>
+          </div>
+        </div>
+        
+        <div class="flash-deal">
+          <div class="flash-deal__img">
+            <a href="hotel.html">
+              <img src="img/Uluwatu luxury villa.png" alt="">
+            </a>
+            <span class="flash-deal__badge">60% OFF</span>
+          </div>
+          <div class="flash-deal__info">
+            <div class="flash-deal__name">Mandala Sky Luxury Villas <span class="stars-inline">★★★★★</span></div>
+            <div class="flash-deal__location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Uluwatu, Bali · Cliff-top view
+            </div>
+          </div>
+          <div class="flash-deal__price">
+            <div class="flash-deal__old">$1,200</div>
+            <div class="flash-deal__current">$480 <span>/night</span></div>
+            <button class="btn btn--accent btn--sm" onclick="window.location.href='hotel.html'">Claim</button>
+          </div>
+        </div>
+        
+        <div class="flash-deal">
+          <div class="flash-deal__img">
+            <a href="hotel.html">
+              <img src="img/Ubud jungle retreat.png" alt="">
+            </a>
+            <span class="flash-deal__badge">45% OFF</span>
+          </div>
+          <div class="flash-deal__info">
+            <div class="flash-deal__name">Emerald Jungle Retreat <span class="stars-inline">★★★★</span></div>
+            <div class="flash-deal__location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ubud, Bali · Private Sanctuary
+            </div>
+          </div>
+          <div class="flash-deal__price">
+            <div class="flash-deal__old">$450</div>
+            <div class="flash-deal__current">$247 <span>/night</span></div>
+            <button class="btn btn--accent btn--sm" onclick="window.location.href='hotel.html'">Claim</button>
+          </div>
+        </div>
+        
+        <div class="flash-deal flash-deal--last">
+          <div class="flash-deal__img">
+            <a href="hotel.html">
+              <img src="img/Seminyak beach club resort.png" alt="">
+            </a>
+            <span class="flash-deal__badge">35% OFF</span>
+          </div>
+          <div class="flash-deal__info">
+            <div class="flash-deal__name">Seminyak Shores Club <span class="stars-inline">★★★★★</span></div>
+            <div class="flash-deal__location">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Seminyak, Bali · Beachfront Bliss
+            </div>
+          </div>
+          <div class="flash-deal__price">
+            <div class="flash-deal__old">$680</div>
+            <div class="flash-deal__current">$442 <span>/night</span></div>
+            <button class="btn btn--accent btn--sm" onclick="window.location.href='hotel.html'">Claim</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Property Cards -->
+      <a href="hotel.html" class="property-card">
+        <div class="property-card__img">
+          <img src="img/The Azure Serenity Resort.png" alt="">
+          <span class="property-card__choice">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 11l3 3 7-7-1.5-1.5L12 11l-1.5-1.5z"/></svg>
+            Top Choice
+          </span>
+        </div>
+        <div class="property-card__body">
+          <div class="property-card__main">
+            <div class="property-card__title-row">
+              <h3 class="property-card__name">The Azure Serenity Resort</h3>
+              <span class="stars-inline">★★★★★</span>
+            </div>
+            <div class="property-card__location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ubud, Bali · 2.5 km from center
+            </div>
+            <div class="property-card__amenities">
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M2 8.82a15 15 0 0 1 20 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg> Free Wi-Fi</span>
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20a2 2 0 0 0 2-2c0-1.1-.9-2-2-2v-2a4 4 0 0 1 4 4 4 4 0 0 1-4 4zM5 14a8 8 0 0 1 8-8h6a3 3 0 0 1 0 6h-3"/></svg> Pool</span>
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11h18v9H3zM12 2v9M5 11V8a7 7 0 0 1 14 0v3"/></svg> Breakfast</span>
+            </div>
+            <div class="property-card__note">Only 2 rooms left at this price!</div>
+          </div>
+          <div class="property-card__pricing">
+            <div class="property-card__score">
+              <span class="score-badge score-badge--blue">8.9 Excellent</span>
+              <span class="score-count">1,240 reviews</span>
+            </div>
+            <div class="property-card__price">
+              <div class="property-card__old">$320</div>
+              <div class="property-card__current">$284 <span>/night</span></div>
+            </div>
+            <button class="btn btn--accent">Book Now</button>
+          </div>
+        </div>
+      </a>
+      
+      <a href="hotel.html" class="property-card">
+        <div class="property-card__img">
+          <img src="img/Lumina Beach Villas.png" alt="">
+        </div>
+        <div class="property-card__body">
+          <div class="property-card__main">
+            <div class="property-card__title-row">
+              <h3 class="property-card__name">Lumina Beach Villas</h3>
+              <span class="stars-inline">★★★★</span>
+            </div>
+            <div class="property-card__location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Seminyak, Bali · Beachfront
+            </div>
+            <div class="property-card__amenities">
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2v20"/></svg> Private Beach</span>
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a8 8 0 0 0 8-8c0-3-1-5.5-3-7-2 4-5 4-5 4s-3 0-5-4c-2 1.5-3 4-3 7a8 8 0 0 0 8 8z"/></svg> Spa</span>
+            </div>
+            <div class="property-card__note">Free cancellation before Oct 10</div>
+          </div>
+          <div class="property-card__pricing">
+            <div class="property-card__score">
+              <span class="score-badge score-badge--blue-light">9.2 Exceptional</span>
+              <span class="score-count">856 reviews</span>
+            </div>
+            <div class="property-card__price">
+              <div class="property-card__current">$415 <span>/night</span></div>
+            </div>
+            <button class="btn btn--accent">Book Now</button>
+          </div>
+        </div>
+      </a>
+      
+      <a href="hotel.html" class="property-card">
+        <div class="property-card__img">
+          <img src="img/The Palms Sanctuary.png" alt="">
+        </div>
+        <div class="property-card__body">
+          <div class="property-card__main">
+            <div class="property-card__title-row">
+              <h3 class="property-card__name">The Palms Sanctuary</h3>
+              <span class="stars-inline">★★★★</span>
+            </div>
+            <div class="property-card__location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Nusa Dua, Bali · 0.8 km from beach
+            </div>
+            <div class="property-card__amenities">
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V15a1 1 0 0 0 1 1h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg> Airport Shuttle</span>
+              <span class="amenity-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></svg> Gym</span>
+            </div>
+            <div class="property-card__note">Breakfast + Dinner deal available</div>
+          </div>
+          <div class="property-card__pricing">
+            <div class="property-card__score">
+              <span class="score-badge score-badge--blue-light">8.4 Great</span>
+              <span class="score-count">2,102 reviews</span>
+            </div>
+            <div class="property-card__price">
+              <div class="property-card__current">$189 <span>/night</span></div>
+            </div>
+            <button class="btn btn--accent">Book Now</button>
+          </div>
+        </div>
+      </a>
+      
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="page-btn page-btn--icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="page-btn page-btn--active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">...</button>
+        <button class="page-btn">12</button>
+        <button class="page-btn page-btn--icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="logo">T-Goda</a>
+        <p class="footer__tagline">Making world travel accessible, affordable, and delightful for everyone since 2024. Your journey starts here.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2024 T-Goda Booking. All rights reserved.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Live countdown timer
+function updateTimer() {
+  const el = document.querySelector('.flash-deals__time');
+  if (!el) return;
+  const parts = el.textContent.split(':').map(s => parseInt(s.trim()));
+  let [h, m, s] = parts;
+  s--;
+  if (s < 0) { s = 59; m--; }
+  if (m < 0) { m = 59; h--; }
+  if (h < 0) { h = 0; m = 0; s = 0; }
+  el.textContent = `${String(h).padStart(2,'0')} : ${String(m).padStart(2,'0')} : ${String(s).padStart(2,'0')}`;
+}
+setInterval(updateTimer, 1000);
+</script>
+
+</body>
+</html>
